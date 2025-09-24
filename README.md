@@ -1,1 +1,4 @@
 # StickyNotes
+A window with editable text.
+# Features
+- Saving
