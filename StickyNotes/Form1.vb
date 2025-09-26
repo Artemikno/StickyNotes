@@ -9,9 +9,7 @@
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        If MsgBox("Do you want to save?", MsgBoxStyle.YesNo Or MsgBoxStyle.Question) = MsgBoxResult.Yes Then
-            My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text)) = RichTextBox1.Text
-        End If
+        My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text)) = RichTextBox1.Text
     End Sub
 
     Private Sub RichTextBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles RichTextBox1.MouseUp

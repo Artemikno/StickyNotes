@@ -22,11 +22,14 @@ Partial Class Dialog1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dialog1))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,12 +72,12 @@ Partial Class Dialog1
         'ListView1
         '
         Me.ListView1.HideSelection = False
+        Me.ListView1.LargeImageList = Me.ImageList1
         Me.ListView1.Location = New System.Drawing.Point(12, 12)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(411, 256)
         Me.ListView1.TabIndex = 1
         Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'Button1
         '
@@ -84,6 +87,12 @@ Partial Class Dialog1
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Add new"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Red
+        Me.ImageList1.Images.SetKeyName(0, "111111111111115342646362627568256825.png")
         '
         'Dialog1
         '
@@ -110,4 +119,5 @@ Partial Class Dialog1
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
     Friend WithEvents ListView1 As ListView
     Friend WithEvents Button1 As Button
+    Friend WithEvents ImageList1 As ImageList
 End Class

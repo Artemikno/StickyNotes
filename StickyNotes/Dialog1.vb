@@ -5,7 +5,7 @@ Public Class Dialog1
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
         Me.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.SelectedItem = ListView1.SelectedItems.Item(0).Name
+        Me.SelectedItem = ListView1.SelectedItems.Item(0).Text
         Me.Close()
     End Sub
 
@@ -15,19 +15,28 @@ Public Class Dialog1
     End Sub
 
     Private Sub Dialog1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If My.Settings.NoteNames Is Nothing Then
+            My.Settings.NoteNames = New Specialized.StringCollection()
+            My.Settings.StickyNote = New Specialized.StringCollection()
+        End If
         If My.Settings.StickyNote Is Nothing Then
             My.Settings.StickyNote = New Specialized.StringCollection()
         End If
-        For Each s As String In My.Settings.StickyNote
-            ListView1.Items.Add(New ListViewItem(s))
+        For Each s As String In My.Settings.NoteNames
+            ListView1.Items.Add(New ListViewItem(s, 0))
         Next
     End Sub
 
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
+        My.Settings.StickyNote.RemoveAt(My.Settings.NoteNames.IndexOf(ListView1.SelectedItems.Item(0).Text))
+        My.Settings.NoteNames.Remove(ListView1.SelectedItems.Item(0).Text)
         ListView1.Items.Remove(ListView1.SelectedItems.Item(0))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ListView1.Items.Add(New ListViewItem(InputBox("Name")))
+        Dim i = InputBox("Name")
+        My.Settings.StickyNote.Add("Text here")
+        My.Settings.NoteNames.Add(i)
+        ListView1.Items.Add(New ListViewItem(i, 0))
     End Sub
 End Class
