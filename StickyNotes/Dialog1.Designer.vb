@@ -25,37 +25,49 @@ Partial Class Dialog1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dialog1))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(208, 274)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(170, 274)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(215, 29)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(253, 29)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(129, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(57, 23)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Add new"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'OK_Button
         '
         Me.OK_Button.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.OK_Button.Location = New System.Drawing.Point(3, 3)
         Me.OK_Button.Name = "OK_Button"
-        Me.OK_Button.Size = New System.Drawing.Size(65, 23)
+        Me.OK_Button.Size = New System.Drawing.Size(57, 23)
         Me.OK_Button.TabIndex = 0
         Me.OK_Button.Text = "OK"
         '
@@ -63,9 +75,9 @@ Partial Class Dialog1
         '
         Me.Cancel_Button.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel_Button.Location = New System.Drawing.Point(74, 3)
+        Me.Cancel_Button.Location = New System.Drawing.Point(66, 3)
         Me.Cancel_Button.Name = "Cancel_Button"
-        Me.Cancel_Button.Size = New System.Drawing.Size(65, 23)
+        Me.Cancel_Button.Size = New System.Drawing.Size(57, 23)
         Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Cancel"
         '
@@ -79,20 +91,20 @@ Partial Class Dialog1
         Me.ListView1.TabIndex = 1
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(145, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(67, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Add new"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'ImageList1
         '
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Red
         Me.ImageList1.Images.SetKeyName(0, "111111111111115342646362627568256825.png")
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(192, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(58, 23)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "Remove"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Dialog1
         '
@@ -110,6 +122,7 @@ Partial Class Dialog1
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Dialog1"
+        Me.TopMost = True
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -120,4 +133,5 @@ Partial Class Dialog1
     Friend WithEvents ListView1 As ListView
     Friend WithEvents Button1 As Button
     Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents Button2 As Button
 End Class

@@ -49,7 +49,6 @@ Partial Class Form1
         Me.Controls.Add(Me.RichTextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Name = "Form1"
-        Me.ShowInTaskbar = False
         Me.Text = "Sticky note"
         Me.TopMost = True
         Me.ResumeLayout(False)

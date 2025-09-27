@@ -2,7 +2,7 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim d As New Dialog1
         If Not d.ShowDialog() = DialogResult.OK Then
-            System.Environment.Exit(0)
+            End
         End If
         Me.Text = d.SelectedItem
         RichTextBox1.Text = My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text))
