@@ -10,6 +10,7 @@
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text)) = RichTextBox1.Text
+        My.Settings.Save()
     End Sub
 
     Private Sub RichTextBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles RichTextBox1.MouseUp
