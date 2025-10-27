@@ -5,11 +5,11 @@
             End
         End If
         Me.Text = d.SelectedItem
-        RichTextBox1.Text = My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text))
+        RichTextBox1.Text = My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text)).Replace("\\n", Environment.NewLine)
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text)) = RichTextBox1.Text
+        My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text)) = RichTextBox1.Text.Replace(Environment.NewLine, "\\n")
         My.Settings.Save()
     End Sub
 
@@ -29,5 +29,10 @@
         ElseIf e.Data.GetFormats().Contains(DataFormats.FileDrop) Then
             RichTextBox1.AppendText(Environment.NewLine + "/" + e.Data.GetData(DataFormats.FileDrop)(0).ToString() + "/")
         End If
+    End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        My.Settings.StickyNote.Item(My.Settings.NoteNames.IndexOf(Me.Text)) = RichTextBox1.Text.Replace(Environment.NewLine, "\\n")
+        My.Settings.Save()
     End Sub
 End Class
