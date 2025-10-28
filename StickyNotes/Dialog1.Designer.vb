@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Dialog1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,17 @@ Partial Class Dialog1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dialog1))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,6 +52,15 @@ Partial Class Dialog1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(253, 29)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(192, 3)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(58, 23)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "Remove"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -83,6 +92,7 @@ Partial Class Dialog1
         '
         'ListView1
         '
+        Me.ListView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView1.HideSelection = False
         Me.ListView1.LargeImageList = Me.ImageList1
         Me.ListView1.Location = New System.Drawing.Point(12, 12)
@@ -96,15 +106,6 @@ Partial Class Dialog1
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Red
         Me.ImageList1.Images.SetKeyName(0, "111111111111115342646362627568256825.png")
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(192, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(58, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Remove"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Dialog1
         '
