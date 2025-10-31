@@ -67,6 +67,9 @@
   <PropertyGroup>
     <StartupObject>StickyNotes.Form1</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>714932844811780147_spC_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -155,6 +158,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="714932844811780147_spC_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
