@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,23 +20,31 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.RichTextBox1 = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExecuteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ContextMenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RichTextBox1
         '
         Me.RichTextBox1.AcceptsReturn = True
         Me.RichTextBox1.AcceptsTab = True
+        Me.RichTextBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Info
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.CausesValidation = False
         Me.RichTextBox1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBox1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Multiline = True
@@ -47,28 +55,64 @@ Partial Class Form1
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem, Me.ExecuteToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(99, 26)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(116, 48)
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
+        '
+        'ExecuteToolStripMenuItem
+        '
+        Me.ExecuteToolStripMenuItem.Name = "ExecuteToolStripMenuItem"
+        Me.ExecuteToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.ExecuteToolStripMenuItem.Text = "Execute"
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.Info
+        Me.StatusStrip1.Controls.Add(Me.Button1)
+        Me.StatusStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 300)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(300, 22)
+        Me.StatusStrip1.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.Control
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(3, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(16, 16)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "X"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 10
         '
         'Form1
         '
         Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(300, 300)
+        Me.ClientSize = New System.Drawing.Size(300, 322)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.RichTextBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
         Me.Name = "Form1"
+        Me.ShowIcon = False
         Me.Text = "Sticky note"
         Me.TopMost = True
         Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.StatusStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -76,4 +120,8 @@ Partial Class Form1
     Friend WithEvents RichTextBox1 As TextBox
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExecuteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StatusStrip1 As Panel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Timer1 As Timer
 End Class

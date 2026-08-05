@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.13.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -55,24 +55,14 @@ Namespace My
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property StickyNote() As Global.System.Collections.Specialized.StringCollection
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Notes() As String
             Get
-                Return CType(Me("StickyNote"),Global.System.Collections.Specialized.StringCollection)
+                Return CType(Me("Notes"),String)
             End Get
             Set
-                Me("StickyNote") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property NoteNames() As Global.System.Collections.Specialized.StringCollection
-            Get
-                Return CType(Me("NoteNames"),Global.System.Collections.Specialized.StringCollection)
-            End Get
-            Set
-                Me("NoteNames") = value
+                Me("Notes") = value
             End Set
         End Property
     End Class

@@ -55,6 +55,7 @@ Partial Class Dialog1
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(192, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(58, 23)
@@ -64,6 +65,7 @@ Partial Class Dialog1
         '
         'Button1
         '
+        Me.Button1.Enabled = False
         Me.Button1.Location = New System.Drawing.Point(129, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(57, 23)
@@ -120,10 +122,8 @@ Partial Class Dialog1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Dialog1"
-        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Dialog1"
-        Me.TopMost = True
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

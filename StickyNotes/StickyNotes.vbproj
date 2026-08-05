@@ -96,6 +96,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Notes.vb" />
     <Compile Include="Dialog1.Designer.vb">
       <DependentUpon>Dialog1.vb</DependentUpon>
     </Compile>
@@ -120,6 +121,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dialog1.resx">
@@ -160,7 +162,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="714932844811780147_spC_icon.ico" />
+    <EmbeddedResource Include="714932844811780147_spC_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
