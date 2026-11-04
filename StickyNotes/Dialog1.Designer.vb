@@ -31,6 +31,7 @@ Partial Class Dialog1
         Me.Cancel_Button = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -109,6 +110,15 @@ Partial Class Dialog1
         Me.ImageList1.TransparentColor = System.Drawing.Color.Red
         Me.ImageList1.Images.SetKeyName(0, "111111111111115342646362627568256825.png")
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(12, 277)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(81, 23)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "A.N. manager"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Dialog1
         '
         Me.AcceptButton = Me.OK_Button
@@ -116,6 +126,7 @@ Partial Class Dialog1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
         Me.ClientSize = New System.Drawing.Size(435, 315)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -135,4 +146,5 @@ Partial Class Dialog1
     Friend WithEvents Button1 As Button
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

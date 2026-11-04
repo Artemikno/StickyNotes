@@ -18,8 +18,11 @@ Public Class Dialog1
 
     Private Shared m As Threading.Mutex
 
-    Function PrevInstance() As Boolean
-        Return Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > 1
+    Public Function PrevInstance() As Boolean
+        Return Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > (IIf(CBool(My.Settings.Options And Options.SHOW_NOTE_SUGGESTIONS), 2, 1))
+    End Function
+    Public Function PrevInstance(amount As Integer) As Boolean
+        Return Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length > amount
     End Function
 
     Private Sub Dialog1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -30,6 +33,16 @@ Public Class Dialog1
             Button1.Enabled = False
             Button2.Enabled = False
         End If
+        ' Source - https://stackoverflow.com/a/534335
+        ' Posted by Markus Olsson, modified by community. See post 'Timeline' for change history
+        ' Retrieved 2026-11-03, License - CC BY-SA 2.5
+
+        If (My.Settings.UpgradeRequired) Then
+            My.Settings.Upgrade()
+            My.Settings.UpgradeRequired = False
+            My.Settings.Save()
+        End If
+
         If My.Settings.Notes Is Nothing Then
             My.Settings.Notes = ""
         End If
@@ -44,6 +57,14 @@ Public Class Dialog1
         For Each s As Notes.Note In ParsedData.Notes
             ListView1.Items.Add(New ListViewItem(s.Name, 0))
         Next
+        If Environment.GetCommandLineArgs().Length = 2 Then
+            Me.DialogResult = System.Windows.Forms.DialogResult.OK
+            Me.SelectedItemIndex = ParsedData.Notes.FindIndex(Function(ByVal n As Notes.Note)
+                                                                  Return n.Name = Environment.GetCommandLineArgs()(1)
+                                                              End Function)
+            Me.SelectedItem = ParsedData.Notes.Item(SelectedItemIndex)
+            Me.Close()
+        End If
     End Sub
 
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
@@ -90,5 +111,9 @@ Public Class Dialog1
             Button1.Enabled = True
             Button2.Enabled = True
         End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dialog2.ShowDialog(Me)
     End Sub
 End Class
