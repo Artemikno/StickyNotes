@@ -66,7 +66,9 @@
 
     Private Sub ExecuteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExecuteToolStripMenuItem.Click
         If RichTextBox1.SelectedText.TrimStart().StartsWith("/") And RichTextBox1.SelectedText.TrimEnd().EndsWith("/") Then
-            Shell(RichTextBox1.SelectedText.Trim().Remove(0, 1).Remove(RichTextBox1.SelectedText.Trim().Remove(0, 1).Length - 1, 1), AppWinStyle.NormalFocus, False)
+            If MsgBox("!WARNING! You are about to execute potentially malicious code! Press ""Yes"" to continue. Your info might be at risk if you choose to continue.", MsgBoxStyle.Exclamation Or MsgBoxStyle.YesNo Or MsgBoxStyle.DefaultButton2) Then
+                Shell(RichTextBox1.SelectedText.Trim().Remove(0, 1).Remove(RichTextBox1.SelectedText.Trim().Remove(0, 1).Length - 1, 1), AppWinStyle.NormalFocus, False)
+            End If
         End If
     End Sub
 

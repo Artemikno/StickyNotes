@@ -77,7 +77,7 @@ Public Class Dialog1
             Button2.Enabled = False
             Return
         End If
-        Dim i = InputBox("Name")
+        Dim i As String = InputBox("Name")
         ParsedData.Notes.Add(New Notes.Note(i, "Text here", New Drawing.Size(300, 322))) 'New Drawing.Size(316, 339)))
         ListView1.Items.Add(New ListViewItem(i) With {.ImageIndex = 0})
         My.Settings.Notes = Notes.NoteSerializer.NoteCollectionToString(ParsedData)

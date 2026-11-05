@@ -58,7 +58,7 @@ Public Class Dialog2
                 ListBox1.Items.Add(s)
             End If
         Next
-        For i = 0 To CheckedListBox1.Items.Count - 1
+        For i As Integer = 0 To CheckedListBox1.Items.Count - 1
             CheckedListBox1.SetItemChecked(i, My.Settings.Options And 2 ^ i)
         Next
 

@@ -20,6 +20,9 @@ Public Class AskUser
     Private WithEvents LLKB As New LowLevelKeyBoardhook()
 
     Private Sub AskUser_KeyDown(keyCode As Keys) Handles LLKB.F12
+        If TimeOfDay.Ticks < My.Settings.SuggestionsPausedUntil Then
+            Return
+        End If
         enteredstring += keyCode.ToString()
         Dim ret As Boolean = False
         For Each s As String In My.Settings.Keywords.Split("␞␟")

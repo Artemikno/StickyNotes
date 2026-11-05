@@ -24,9 +24,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.4.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -60,7 +62,7 @@
     <OptionStrict>Off</OptionStrict>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
+    <OptionInfer>Off</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -69,7 +71,7 @@
     <StartupObject>StickyNotes.StickyNotes</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>714932844811780147_spC_icon.ico</ApplicationIcon>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>9A4AC314E367AABD2394D2C4DFC46F26D02F98E1</ManifestCertificateThumbprint>
@@ -82,6 +84,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -199,7 +204,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="714932844811780147_spC_icon.ico" />
+    <EmbeddedResource Include="favicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
